@@ -151,47 +151,113 @@ int getLength(Node* head){
 
 }
 
-int main(){
-    // Node* node1 = new Node(10);
+
+// ... (your Node class and functions)
+
+int main() {
     Node* head = NULL;
     Node* tail = NULL;
 
-    print(head);
+    int choice;
+    int data;
+    int position;
+
+    while (true) {
+        cout << "Menu:\n";
+        cout << "1. Insert at Head\n";
+        cout << "2. Insert at Tail\n";
+        cout << "3. Insert at Position\n";
+        cout << "4. Delete Node\n";
+        cout << "5. Print List\n";
+        cout << "6. Get Length\n";
+        cout << "7. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter data to insert at head: ";
+                cin >> data;
+                insertAtHead(tail, head, data);
+                break;
+            case 2:
+                cout << "Enter data to insert at tail: ";
+                cin >> data;
+                insertAtTail(tail, head, data);
+                break;
+            case 3:
+                cout << "Enter position: ";
+                cin >> position;
+                cout << "Enter data to insert at position " << position << ": ";
+                cin >> data;
+                insertAtPosition(tail, head, position, data);
+                break;
+            case 4:
+                cout << "Enter position to delete: ";
+                cin >> position;
+                deleteNode(position, tail, head);
+                break;
+            case 5:
+                cout << "Doubly Linked List: ";
+                print(head);
+                break;
+            case 6:
+                cout << "Length of doubly linked list: " << getLength(head) << endl;
+                break;
+            case 7:
+                // Exit the program
+                return 0;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+                break;
+        }
+    }
+
+    return 0;
+}
 
 
-    insertAtHead(tail,head,11);
-    print(head);
+// int main(){
+//     // Node* node1 = new Node(10);
+//     Node* head = NULL;
+//     Node* tail = NULL;
 
-    insertAtHead(tail,head,13);
-    print(head);
+//     print(head);
 
-    insertAtHead(tail,head,8);
-    print(head);
 
-    insertAtTail(tail,head,9);
-    print(head);
+//     insertAtHead(tail,head,11);
+//     print(head);
 
-    insertAtPosition(tail,head,2,100);
-    print(head);
+//     insertAtHead(tail,head,13);
+//     print(head);
 
-    insertAtPosition(tail,head,1,101);
-    print(head);
+//     insertAtHead(tail,head,8);
+//     print(head);
 
-    insertAtPosition(tail,head,7,103);
-    print(head);
+//     insertAtTail(tail,head,9);
+//     print(head);
 
-    deleteNode(1,tail,head);
-    print(head);
+//     insertAtPosition(tail,head,2,100);
+//     print(head);
+
+//     insertAtPosition(tail,head,1,101);
+//     print(head);
+
+//     insertAtPosition(tail,head,7,103);
+//     print(head);
+
+//     deleteNode(1,tail,head);
+//     print(head);
    
-    cout<<"length of doubly linked list: "<<getLength(head) << endl;
-    // insertAtPosition(tail,head,7,103);
-    // print(head);    
+//     cout<<"length of doubly linked list: "<<getLength(head) << endl;
+//     // insertAtPosition(tail,head,7,103);
+//     // print(head);    
 
-    cout << "head "<< head -> data <<endl;
-    cout << "tail "<< tail -> data <<endl;
+//     cout << "head "<< head -> data <<endl;
+//     cout << "tail "<< tail -> data <<endl;
         
 
 
-    return 0;
+//     return 0;
 
-}
+// }

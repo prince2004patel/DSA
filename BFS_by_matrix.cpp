@@ -1,3 +1,4 @@
+//Breadth-First Search(BFS)by using adjaceny matrix
 #include <iostream>
 
 using namespace std;

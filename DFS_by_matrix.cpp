@@ -1,3 +1,5 @@
+//depth-first search(DFS) by using adjacency matrix
+
 #include <iostream>
 
 using namespace std;

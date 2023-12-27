@@ -30,7 +30,7 @@ main()
             insert();
             break;
         case 2:
-            delete ();
+            delete();
             break;
         case 3:
             serach();
@@ -55,7 +55,7 @@ void insert()
         if (front == -1)
             /*If queue is initially empty */
             front = 0;
-        printf("Inset the element in queue : ");
+        printf("Insert the element in queue : ");
         scanf("%d", &add_item);
         rear = rear + 1;
         queue_array[rear] = add_item;
@@ -85,7 +85,7 @@ void serach()
 
     if (rear - p <= -1)
     {
-        printf("\nSTACK is overflow !!!");
+        printf("\nqueue is overflow !!!");
     }
     else
     {

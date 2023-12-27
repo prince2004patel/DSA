@@ -37,6 +37,7 @@ main()
             break;
         case 4:
             display();
+            break;
         case 5:
             exit(1);
         default:
